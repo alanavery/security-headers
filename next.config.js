@@ -7,7 +7,8 @@ const contentSecurityPolicy = `
     ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''}
     'self';
   style-src
-    ${process.env.NODE_ENV === 'development' ? `'unsafe-inline'` : 'nonce-test'};
+    ${process.env.NODE_ENV === 'development' ? `'unsafe-inline'` : 'nonce-test'}
+    'self';
 `;
 
 const securityHeaders = [
