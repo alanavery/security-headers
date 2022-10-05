@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 
 const contentSecurityPolicy = `
-  default-src 'self';
-  style-src 'self' 'nonce-test';
+  default-src
+    'self';
+  script-src
+    ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''}
+    'self';
+  style-src
+    ${process.env.NODE_ENV === 'development' ? `'unsafe-inline'` : 'nonce-test'};
 `;
 
 const securityHeaders = [
