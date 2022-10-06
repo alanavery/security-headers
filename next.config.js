@@ -4,6 +4,8 @@ const contentSecurityPolicy = `
   default-src
     'self';
   script-src
+    *.googletagmanager.com
+    'nonce-test'
     ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''}
     'self';
   style-src
