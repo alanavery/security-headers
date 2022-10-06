@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head nonce="test">
-        {/* <script nonce="test">{`console.log('Hello!');`}</script> */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
